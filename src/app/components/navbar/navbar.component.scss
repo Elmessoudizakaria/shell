@@ -1,0 +1,25 @@
+:host {
+  display: block;
+}
+nav {
+  padding: 5px 15px;
+  box-sizing: border-box;
+  width: 100%;
+  background: #3e0771;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    color: white;
+    .menu {
+      display: flex;
+      gap: 25px;
+    }
+    li {
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
