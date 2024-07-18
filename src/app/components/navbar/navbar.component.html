@@ -1,11 +1,26 @@
-<nav>
+<!-- <nav>
   <ul>
     <ul class="menu">
       <li><a routerLink="">home</a></li>
-      <li>
+       <li>
         <app-search-category-menu-wrapper></app-search-category-menu-wrapper>
       </li>
     </ul>
     <li>bell {{ selectedProducts.length }}</li>
   </ul>
-</nav>
+</nav> -->
+
+<div class="mega-menu">
+  <div class="menu-column">
+    <div class="menu-item">Home</div>
+    <div class="menu-item">
+      Categories
+      <div class="submenu">
+        <div class="submenu-item">
+          <app-search-category-menu-wrapper></app-search-category-menu-wrapper>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>bell{{ selectedProducts.length }}</div>
+</div>

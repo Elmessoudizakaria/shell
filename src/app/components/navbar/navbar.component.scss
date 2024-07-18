@@ -1,24 +1,58 @@
-:host {
-  display: block;
-}
-nav {
-  padding: 5px 15px;
-  box-sizing: border-box;
-  width: 100%;
-  background: #3e0771;
-  ul {
+$primary-color: #2e4053;
+$primary-sub-color: #ffffff;
+$secondary-color: #ffffff; // Red
+$font-family: "Helvetica", sans-serif;
+$menu-item-padding: 10px;
+$submenu-item-padding: 5px;
+
+// Mega menu styles
+.mega-menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: $primary-color;
+  color: white;
+  padding: 20px;
+
+  .menu-column {
     display: flex;
-    justify-content: space-between;
-    list-style: none;
-    color: white;
-    .menu {
-      display: flex;
-      gap: 25px;
-    }
-    li {
-      a {
-        text-decoration: none;
-        color: white;
+    gap: 25px;
+    padding: 0 $menu-item-padding;
+
+    .menu-item {
+      font-family: $font-family;
+      font-size: 16px;
+      margin-bottom: 10px;
+      position: relative;
+
+      &:hover {
+        color: $secondary-color;
+
+        .submenu {
+          display: block;
+        }
+      }
+
+      .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $primary-color;
+        padding: $submenu-item-padding;
+        border-radius: 0px 0px 5px 5px;
+
+        .submenu-item {
+          font-size: 14px;
+          margin-bottom: 5px;
+          padding: 5px;
+          margin-top: 5px;
+          min-width: 600px;
+          cursor: pointer;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
       }
     }
   }
